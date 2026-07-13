@@ -37,7 +37,8 @@ See [docs/DEPLOY.md](docs/DEPLOY.md) for publishing this app to Walrus with
 
 ## Author
 
-Built by [@izzetcakmak](https://github.com/izzetcakmak).
+Built by [@izzetcakmak](https://github.com/izzetcakmak) on Walrus.
+Contact: [info@morsu.xyz](mailto:info@morsu.xyz)
 
 Owner Sui wallet (site object ownership & attribution):
 

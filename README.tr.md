@@ -38,7 +38,8 @@ Uygulamayı `site-builder` ile Walrus'a yayınlamak için
 
 ## Yazar
 
-[@izzetcakmak](https://github.com/izzetcakmak) tarafından geliştirildi.
+[@izzetcakmak](https://github.com/izzetcakmak) tarafından Walrus üzerinde geliştirildi.
+İletişim: [info@morsu.xyz](mailto:info@morsu.xyz)
 
 Sahip Sui cüzdanı (site objesi sahipliği ve ilişkilendirme):
 
