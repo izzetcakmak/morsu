@@ -5,32 +5,37 @@ import { OWNER } from "../config.js";
 import { truncateMiddle } from "../utils/truncate.js";
 import { copyToClipboard } from "../utils/copy.js";
 import { toast } from "./toast.js";
+import { t } from "../i18n.js";
 
 export function openAbout() {
   openModal({
-    title: "About Walrus Blob Explorer",
+    title: t("about.title"),
     body: h(
       "div",
       { class: "stack" },
       h(
         "p",
         {},
-        "A tiny, dependency-free client for reading blobs from ",
-        h("a", { class: "footer__link", href: "https://walrus.xyz", target: "_blank", rel: "noopener" }, "Walrus"),
-        " decentralized storage.",
+        t("about.desc1"),
+        h(
+          "a",
+          { class: "footer__link", href: "https://walrus.xyz", target: "_blank", rel: "noopener" },
+          "Walrus",
+        ),
+        t("about.desc2"),
       ),
-      h("p", { class: "search__hint" }, "Paste a Blob ID, pick an aggregator, and preview the content."),
+      h("p", { class: "search__hint" }, t("about.hint")),
       h(
         "ul",
         { class: "stack", style: "font-size:.88rem;color:var(--c-text-dim)" },
-        h("li", {}, "🔒 Read-only — never writes to Walrus."),
-        h("li", {}, "🧳 History & favorites stay in your browser."),
-        h("li", {}, "⌨️  Press “/” to focus search, “Esc” to go home."),
+        h("li", {}, t("about.li1")),
+        h("li", {}, t("about.li2")),
+        h("li", {}, t("about.li3")),
       ),
       h(
         "p",
         { class: "search__hint" },
-        "Built by ",
+        `${t("about.builtBy")} `,
         h(
           "a",
           {
@@ -47,16 +52,16 @@ export function openAbout() {
           {
             class: "footer__link",
             style: "font-family:var(--font-mono);padding:0",
-            title: `${OWNER.suiAddress} (click to copy)`,
+            title: `${OWNER.suiAddress} ${t("about.copyHint")}`,
             onclick: async () => {
               const ok = await copyToClipboard(OWNER.suiAddress);
-              toast(ok ? "Sui address copied." : "Copy failed.", ok ? "success" : "error");
+              toast(ok ? t("about.suiCopied") : t("preview.copyFailed"), ok ? "success" : "error");
             },
           },
           truncateMiddle(OWNER.suiAddress, 8, 6),
         ),
       ),
     ),
-    actions: [{ label: "Close", variant: "primary", onClick: (close) => close() }],
+    actions: [{ label: t("about.close"), variant: "primary", onClick: (close) => close() }],
   });
 }
