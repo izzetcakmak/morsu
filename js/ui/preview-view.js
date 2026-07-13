@@ -9,13 +9,14 @@ import { copyToClipboard } from "../utils/copy.js";
 import { shareLink } from "../utils/share.js";
 import { toast } from "./toast.js";
 import { isFavorite, toggleFavorite } from "../storage/favorites.js";
+import { t } from "../i18n.js";
 
 function metaRow(label, value) {
   return [h("dt", {}, label), h("dd", {}, value)];
 }
 
 function actions(result, blobId) {
-  const favBtn = h("button", { class: "btn btn--icon", title: "Toggle favorite" });
+  const favBtn = h("button", { class: "btn btn--icon", title: t("preview.favTitle") });
   function paintFav() {
     const on = isFavorite(blobId);
     favBtn.replaceChildren(on ? icons.starFilled({ size: 16 }) : icons.star({ size: 16 }));
@@ -25,17 +26,17 @@ function actions(result, blobId) {
   favBtn.addEventListener("click", () => {
     const now = toggleFavorite({ blobId, contentType: result.contentType, size: result.size });
     paintFav();
-    toast(now ? "Pinned to favorites." : "Removed from favorites.", now ? "success" : "info");
+    toast(now ? t("preview.pinned") : t("preview.unpinned"), now ? "success" : "info");
   });
 
   const copyBtn = h(
     "button",
     {
       class: "btn btn--icon",
-      title: "Copy Blob ID",
+      title: t("preview.copyId"),
       onclick: async () => {
         const ok = await copyToClipboard(blobId);
-        toast(ok ? "Blob ID copied." : "Copy failed.", ok ? "success" : "error");
+        toast(ok ? t("preview.idCopied") : t("preview.copyFailed"), ok ? "success" : "error");
       },
     },
     icons.copy({ size: 16 }),
@@ -45,10 +46,10 @@ function actions(result, blobId) {
     "button",
     {
       class: "btn btn--icon",
-      title: "Copy shareable link",
+      title: t("preview.copyLink"),
       onclick: async () => {
         const ok = await copyToClipboard(shareLink(blobId));
-        toast(ok ? "Shareable link copied." : "Copy failed.", ok ? "success" : "error");
+        toast(ok ? t("preview.linkCopied") : t("preview.copyFailed"), ok ? "success" : "error");
       },
     },
     icons.link({ size: 16 }),
@@ -56,7 +57,13 @@ function actions(result, blobId) {
 
   const rawLink = h(
     "a",
-    { class: "btn btn--icon", href: result.url, target: "_blank", rel: "noopener", title: "Open raw" },
+    {
+      class: "btn btn--icon",
+      href: result.url,
+      target: "_blank",
+      rel: "noopener",
+      title: t("preview.openRaw"),
+    },
     icons.external({ size: 16 }),
   );
 
@@ -66,7 +73,7 @@ function actions(result, blobId) {
       class: "btn btn--icon",
       href: URL.createObjectURL(result.blob),
       download: blobId,
-      title: "Download",
+      title: t("preview.download"),
     },
     icons.download({ size: 16 }),
   );
@@ -80,10 +87,10 @@ export async function renderPreviewCard(result, blobId) {
   const meta = h(
     "dl",
     { class: "preview__meta" },
-    ...metaRow("Blob ID", truncateMiddle(blobId, 12, 10)),
-    ...metaRow("Type", mimeLabel(result.contentType) || "unknown"),
-    ...metaRow("Size", formatBytes(result.size)),
-    ...metaRow("Aggregator", result.aggregator.label),
+    ...metaRow(t("preview.blobId"), truncateMiddle(blobId, 12, 10)),
+    ...metaRow(t("preview.type"), mimeLabel(result.contentType) || "unknown"),
+    ...metaRow(t("preview.size"), formatBytes(result.size)),
+    ...metaRow(t("preview.aggregator"), result.aggregator.label),
   );
 
   return h(
@@ -92,7 +99,7 @@ export async function renderPreviewCard(result, blobId) {
     h(
       "div",
       { class: "preview__bar" },
-      h("span", { class: "preview__title" }, "Preview"),
+      h("span", { class: "preview__title" }, t("preview.title")),
       h("span", { class: "badge" }, result.category),
       h("div", { class: "spacer" }),
       actions(result, blobId),
@@ -110,7 +117,7 @@ export function renderLoading() {
     h(
       "div",
       { class: "preview__body" },
-      h("div", { class: "row", style: "gap:12px" }, h("div", { class: "spinner" }), h("span", { class: "search__hint" }, "Fetching blob…")),
+      h("div", { class: "row", style: "gap:12px" }, h("div", { class: "spinner" }), h("span", { class: "search__hint" }, t("preview.loading"))),
     ),
   );
 }
