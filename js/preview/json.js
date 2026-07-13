@@ -2,13 +2,14 @@
 import { h } from "../dom.js";
 import { MAX_INLINE_PREVIEW_BYTES } from "../config.js";
 import { formatBytes } from "../utils/format-bytes.js";
+import { t } from "../i18n.js";
 
 export async function renderJson(result) {
   if (result.size > MAX_INLINE_PREVIEW_BYTES) {
     return h(
       "div",
       { class: "preview__body" },
-      h("p", { class: "empty" }, `JSON is too large to preview (${formatBytes(result.size)}).`),
+      h("p", { class: "empty" }, t("preview.jsonTooLarge", { size: formatBytes(result.size) })),
     );
   }
   const raw = await result.blob.text();
