@@ -35,6 +35,7 @@ export const STORAGE_KEYS = {
   theme: "wbe.theme.v1",
   aggregator: "wbe.aggregator.v1",
   customAggregator: "wbe.aggregator.custom.v1",
+  lang: "wbe.lang.v1",
 };
 
 export const HISTORY_LIMIT = 25;
