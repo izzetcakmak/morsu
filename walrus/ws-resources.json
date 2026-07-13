@@ -1,0 +1,26 @@
+{
+  "$schema": "Walrus Sites resource configuration",
+  "headers": {
+    "/index.html": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Cache-Control": "no-cache"
+    },
+    "/js/*": {
+      "Content-Type": "application/javascript; charset=utf-8"
+    },
+    "/css/*": {
+      "Content-Type": "text/css; charset=utf-8"
+    }
+  },
+  "routes": {
+    "/*": "/index.html"
+  },
+  "metadata": {
+    "link": "https://walrus.xyz",
+    "image_url": "assets/favicon.svg",
+    "description": "Look up and preview blobs on Walrus decentralized storage.",
+    "project_url": "https://github.com/izzetcakmak/walrus-blob-explorer",
+    "creator": "izzetcakmak"
+  },
+  "ignore": ["/tests/*", "/docs/*", "/.github/*", "/*.md"]
+}
