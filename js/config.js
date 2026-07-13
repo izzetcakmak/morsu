@@ -1,6 +1,13 @@
 // Central configuration for the Walrus Blob Explorer.
 // Public aggregator endpoints expose GET /v1/blobs/<blobId> to read blob bytes.
 
+// Project owner / attribution. The Sui address is the owner wallet the
+// published Walrus Site is associated with.
+export const OWNER = {
+  github: "izzetcakmak",
+  suiAddress: "0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840",
+};
+
 export const AGGREGATORS = [
   {
     id: "testnet",
