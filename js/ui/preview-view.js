@@ -6,6 +6,7 @@ import { formatBytes } from "../utils/format-bytes.js";
 import { mimeLabel } from "../utils/mime.js";
 import { truncateMiddle } from "../utils/truncate.js";
 import { copyToClipboard } from "../utils/copy.js";
+import { shareLink } from "../utils/share.js";
 import { toast } from "./toast.js";
 import { isFavorite, toggleFavorite } from "../storage/favorites.js";
 
@@ -40,6 +41,19 @@ function actions(result, blobId) {
     icons.copy({ size: 16 }),
   );
 
+  const shareBtn = h(
+    "button",
+    {
+      class: "btn btn--icon",
+      title: "Copy shareable link",
+      onclick: async () => {
+        const ok = await copyToClipboard(shareLink(blobId));
+        toast(ok ? "Shareable link copied." : "Copy failed.", ok ? "success" : "error");
+      },
+    },
+    icons.link({ size: 16 }),
+  );
+
   const rawLink = h(
     "a",
     { class: "btn btn--icon", href: result.url, target: "_blank", rel: "noopener", title: "Open raw" },
@@ -57,7 +71,7 @@ function actions(result, blobId) {
     icons.download({ size: 16 }),
   );
 
-  return h("div", { class: "row" }, favBtn, copyBtn, rawLink, dlLink);
+  return h("div", { class: "row" }, favBtn, copyBtn, shareBtn, rawLink, dlLink);
 }
 
 export async function renderPreviewCard(result, blobId) {
