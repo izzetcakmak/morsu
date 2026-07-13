@@ -15,6 +15,7 @@ local history and favorites. The app itself is designed to be deployed as a
 - ⭐ Pin favorite blobs
 - 🔗 Shareable deep links (`#/blob/<id>`)
 - 🌗 Dark / light theme
+- 🌍 Bilingual UI — English (default) and Turkish, one-click toggle
 - ⚡ Zero dependencies, zero build step — pure HTML/CSS/JS
 
 ## Quick start
