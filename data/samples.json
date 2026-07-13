@@ -1,0 +1,20 @@
+{
+  "note": "Sample Walrus testnet blob IDs for quick testing. Testnet blobs can expire; if a sample 404s, store your own with `walrus store <file>` and paste the returned Blob ID.",
+  "samples": [
+    {
+      "label": "Text file",
+      "emoji": "📄",
+      "blobId": "0BZQzr9Xp3nkq5m2VtY7cJdLfW8HgR4sT1uN6oPaEbC"
+    },
+    {
+      "label": "PNG image",
+      "emoji": "🖼️",
+      "blobId": "1cLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPqRsTuVwXyz"
+    },
+    {
+      "label": "JSON doc",
+      "emoji": "🧾",
+      "blobId": "2dMnOpQrStUvWxYzAbCdEfGhIjKlMnOpQrStUvWxYz1"
+    }
+  ]
+}
