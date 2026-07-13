@@ -1,0 +1,18 @@
+/* Light theme overrides — applied when <html data-theme="light"> */
+[data-theme="light"] {
+  --c-bg: #f4f6fb;
+  --c-bg-elev: #ffffff;
+  --c-bg-elev-2: #eef1f8;
+  --c-border: #d8deec;
+  --c-text: #17203a;
+  --c-text-dim: #4a5677;
+  --c-text-faint: #8592b0;
+
+  --c-brand: #12a99c;
+  --c-brand-strong: #0e8c81;
+  --c-brand-contrast: #ffffff;
+  --c-accent: #4361ee;
+
+  --shadow-1: 0 1px 2px rgba(20, 30, 60, 0.08);
+  --shadow-2: 0 10px 34px rgba(20, 30, 60, 0.12);
+}
