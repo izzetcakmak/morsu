@@ -3,6 +3,7 @@ import { h } from "../dom.js";
 import { icons } from "./icons.js";
 import { isValidBlobId, normalizeBlobInput } from "../utils/validate-blob-id.js";
 import { renderAggregatorSelect } from "./aggregator-select.js";
+import { t } from "../i18n.js";
 
 export function renderSearch({ initialValue = "", onLookup } = {}) {
   const input = h("input", {
@@ -11,7 +12,7 @@ export function renderSearch({ initialValue = "", onLookup } = {}) {
     spellcheck: "false",
     autocapitalize: "off",
     autocomplete: "off",
-    placeholder: "Paste a Walrus Blob ID (43 chars) or aggregator URL…",
+    placeholder: t("search.placeholder"),
     value: initialValue,
     "aria-label": "Walrus Blob ID",
   });
@@ -20,7 +21,7 @@ export function renderSearch({ initialValue = "", onLookup } = {}) {
     "button",
     { class: "btn btn--primary", type: "submit" },
     icons.search({ size: 16 }),
-    "Look up",
+    t("search.button"),
   );
 
   function submit() {
@@ -39,19 +40,20 @@ export function renderSearch({ initialValue = "", onLookup } = {}) {
   const form = h(
     "form",
     { class: "search", onsubmit: (e) => (e.preventDefault(), submit()) },
-    h("div", { class: "search__label" }, "Explore a Walrus blob"),
-    h(
-      "div",
-      { class: "search__hint" },
-      "Read any blob from a public Walrus aggregator and preview it below.",
-    ),
+    h("div", { class: "search__label" }, t("search.title")),
+    h("div", { class: "search__hint" }, t("search.hint")),
     h("div", { class: "search__field" }, input, button),
     h(
       "div",
       { class: "search__meta" },
       renderAggregatorSelect(),
       h("span", { class: "spacer" }),
-      h("span", { class: "badge badge--brand" }, h("span", { class: "badge__dot" }), "read-only"),
+      h(
+        "span",
+        { class: "badge badge--brand" },
+        h("span", { class: "badge__dot" }),
+        t("search.readonly"),
+      ),
     ),
   );
 
