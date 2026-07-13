@@ -31,6 +31,16 @@ python -m http.server 8080
 See [docs/DEPLOY.md](docs/DEPLOY.md) for publishing this app to Walrus with
 `site-builder`.
 
+## Author
+
+Built by [@izzetcakmak](https://github.com/izzetcakmak).
+
+Owner Sui wallet (site object ownership & attribution):
+
+```
+0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840
+```
+
 ## License
 
 MIT © İzzet Çakmak
