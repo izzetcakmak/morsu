@@ -3,16 +3,19 @@
   "samples": [
     {
       "label": "Text file",
+      "label_tr": "Metin dosyası",
       "emoji": "📄",
       "blobId": "0BZQzr9Xp3nkq5m2VtY7cJdLfW8HgR4sT1uN6oPaEbC"
     },
     {
       "label": "PNG image",
+      "label_tr": "PNG görseli",
       "emoji": "🖼️",
       "blobId": "1cLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPqRsTuVwXyz"
     },
     {
       "label": "JSON doc",
+      "label_tr": "JSON belgesi",
       "emoji": "🧾",
       "blobId": "2dMnOpQrStUvWxYzAbCdEfGhIjKlMnOpQrStUvWxYz1"
     }
