@@ -1,4 +1,4 @@
-// Relative time formatting, e.g. "3 min ago".
+// Relative time formatting, e.g. "3 min ago" — locale-aware.
 const DIVISIONS = [
   { amount: 60, unit: "second" },
   { amount: 60, unit: "minute" },
@@ -9,9 +9,18 @@ const DIVISIONS = [
   { amount: Number.POSITIVE_INFINITY, unit: "year" },
 ];
 
-const rtf = new Intl.RelativeTimeFormat(undefined, { numeric: "auto" });
+const formatters = new Map();
 
-export function timeAgo(timestamp) {
+function rtfFor(locale) {
+  const key = locale || "default";
+  if (!formatters.has(key)) {
+    formatters.set(key, new Intl.RelativeTimeFormat(locale || undefined, { numeric: "auto" }));
+  }
+  return formatters.get(key);
+}
+
+export function timeAgo(timestamp, locale) {
+  const rtf = rtfFor(locale);
   let duration = (timestamp - Date.now()) / 1000;
   for (const division of DIVISIONS) {
     if (Math.abs(duration) < division.amount) {
