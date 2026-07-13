@@ -32,6 +32,11 @@ The blob is fetched read-only from the chosen aggregator and previewed inline.
 Each lookup updates the URL to `#/blob/<id>`, so you can bookmark or share a
 direct link to a specific blob.
 
+## Language
+
+The UI is bilingual. It opens in **English** by default; click the **TR / EN**
+button in the header to switch. Your choice is remembered in the browser.
+
 ## Custom aggregator
 
 Choose **Custom endpoint…** in the aggregator dropdown to point the app at any
