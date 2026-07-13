@@ -1,10 +1,13 @@
-# 🦭 Walrus Blob Explorer
+# 🦭 Morsu
 
-A tiny, dependency-free web app to look up and preview blobs stored on
-[Walrus](https://walrus.xyz) decentralized storage. Paste a **Blob ID**, pick an
-aggregator, and instantly preview images, text, JSON, PDFs and video — with a
-local history and favorites. The app itself is designed to be deployed as a
-**Walrus Site**.
+**[morsu.xyz](https://morsu.xyz)** — a tiny, dependency-free web app to look up
+and preview blobs stored on [Walrus](https://walrus.xyz) decentralized storage.
+Paste a **Blob ID**, pick an aggregator, and instantly preview images, text,
+JSON, PDFs and video — with a local history and favorites. The app itself is
+designed to be deployed as a **Walrus Site**.
+
+> *Morsu* comes from **“mors”**, the Turkish word for walrus (and a nod to
+> Finnish *mursu*).
 
 ## Features
 
