@@ -9,7 +9,7 @@ export function renderFooter() {
     h(
       "div",
       { class: "container footer__inner" },
-      h("span", {}, "🦭 Walrus Blob Explorer"),
+      h("span", {}, "🦭 Morsu"),
       h("span", { class: "footer__dot" }, "·"),
       h("span", { class: "footer__muted" }, t("footer.tagline")),
       h("div", { class: "spacer" }),
@@ -22,7 +22,7 @@ export function renderFooter() {
         "a",
         {
           class: "footer__link",
-          href: "https://github.com/izzetcakmak/walrus-blob-explorer",
+          href: "https://github.com/izzetcakmak/morsu",
           target: "_blank",
           rel: "noopener",
         },
