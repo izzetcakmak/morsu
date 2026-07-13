@@ -3,6 +3,7 @@
 import { h, mount, $ } from "./dom.js";
 import { initTheme } from "./ui/theme.js";
 import { renderHeader } from "./ui/header.js";
+import { renderFooter } from "./ui/footer.js";
 import { renderSearch } from "./ui/search-view.js";
 import { renderSamples } from "./ui/samples.js";
 import { renderHistoryPanel } from "./ui/history-panel.js";
@@ -59,7 +60,7 @@ export async function boot(samples = []) {
     renderSamples(samples, { onOpen: open }),
   );
 
-  mount(root, renderHeader(), main);
+  mount(root, renderHeader(), main, renderFooter());
 
   function handleRoute(state) {
     if (state.route === "blob") {
