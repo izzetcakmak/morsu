@@ -2,6 +2,7 @@
 import { h } from "../dom.js";
 import { icons } from "./icons.js";
 import { getTheme, toggleTheme } from "./theme.js";
+import { openAbout } from "./about.js";
 
 export function renderHeader() {
   const toggle = h("button", {
@@ -33,6 +34,16 @@ export function renderHeader() {
       ),
       h("span", { class: "header__tag" }, "decentralized storage"),
       h("div", { class: "spacer" }),
+      h(
+        "button",
+        {
+          class: "btn btn--icon btn--ghost",
+          title: "About",
+          "aria-label": "About",
+          onclick: openAbout,
+        },
+        icons.info(),
+      ),
       toggle,
     ),
   );
