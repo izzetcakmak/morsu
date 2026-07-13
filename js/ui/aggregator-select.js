@@ -8,6 +8,7 @@ import {
 } from "../aggregator.js";
 import { openModal } from "./modal.js";
 import { toast } from "./toast.js";
+import { t } from "../i18n.js";
 
 export function renderAggregatorSelect(onChange) {
   const select = h("select", { class: "input", style: "flex:0 0 auto;width:auto" });
@@ -19,7 +20,7 @@ export function renderAggregatorSelect(onChange) {
       if (agg.id === getActiveAggregatorId()) opt.selected = true;
       select.appendChild(opt);
     }
-    select.appendChild(h("option", { value: "__custom__" }, "Custom endpoint…"));
+    select.appendChild(h("option", { value: "__custom__" }, t("agg.custom")));
   }
   repaint();
 
@@ -38,7 +39,7 @@ export function renderAggregatorSelect(onChange) {
   return h(
     "label",
     { class: "row", style: "gap:6px" },
-    h("span", { class: "search__hint" }, "Aggregator"),
+    h("span", { class: "search__hint" }, t("search.aggregator")),
     select,
   );
 }
@@ -50,27 +51,27 @@ function promptCustom(done) {
     value: "",
   });
   openModal({
-    title: "Custom aggregator endpoint",
+    title: t("agg.modalTitle"),
     body: h(
       "div",
       { class: "stack" },
-      h("p", { class: "search__hint" }, "Base URL of a Walrus aggregator (no trailing /v1)."),
+      h("p", { class: "search__hint" }, t("agg.modalHint")),
       input,
     ),
     actions: [
-      { label: "Cancel", onClick: (close) => close() },
+      { label: t("agg.cancel"), onClick: (close) => close() },
       {
-        label: "Save",
+        label: t("agg.save"),
         variant: "primary",
         onClick: (close) => {
           const url = input.value.trim();
           if (!/^https?:\/\//.test(url)) {
-            toast("Enter a valid http(s) URL.", "error");
+            toast(t("agg.invalidUrl"), "error");
             return;
           }
           setCustomAggregator(url);
           setActiveAggregatorId("custom");
-          toast("Custom aggregator saved.", "success");
+          toast(t("agg.saved"), "success");
           close();
           done?.();
         },
