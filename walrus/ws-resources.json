@@ -16,10 +16,10 @@
     "/*": "/index.html"
   },
   "metadata": {
-    "link": "https://walrus.xyz",
+    "link": "https://morsu.xyz",
     "image_url": "assets/favicon.svg",
-    "description": "Look up and preview blobs on Walrus decentralized storage.",
-    "project_url": "https://github.com/izzetcakmak/walrus-blob-explorer",
+    "description": "Morsu — look up and preview blobs on Walrus decentralized storage.",
+    "project_url": "https://github.com/izzetcakmak/morsu",
     "creator": "izzetcakmak",
     "owner_sui_address": "0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840"
   },
