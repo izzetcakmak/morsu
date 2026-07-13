@@ -1,0 +1,24 @@
+# site-builder configuration.
+# Use with:  site-builder --config walrus/sites-config.yaml publish .
+#
+# The active context selects which network the site object is published to.
+default_context: testnet
+
+contexts:
+  testnet:
+    package: 0xf99aee9f21493e1590e7e5a9aea6f343a1f381031a04b732523022d1d1d31072
+    general:
+      rpc_url: https://fullnode.testnet.sui.io:443
+      wallet: ~/.sui/sui_config/client.yaml
+      walrus_binary: walrus
+      walrus_config: ~/.config/walrus/client_config.yaml
+      gas_budget: 500000000
+
+  mainnet:
+    package: 0x26eb7ee8688da02c5f671679524e379f0b837a12f1d1d799f255b7eea260ad27
+    general:
+      rpc_url: https://fullnode.mainnet.sui.io:443
+      wallet: ~/.sui/sui_config/client.yaml
+      walrus_binary: walrus
+      walrus_config: ~/.config/walrus/client_config.yaml
+      gas_budget: 500000000
