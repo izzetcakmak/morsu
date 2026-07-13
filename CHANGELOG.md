@@ -13,6 +13,7 @@ All notable changes to this project are documented here. The format is based on
 - Local lookup history and pinned favorites (localStorage).
 - Shareable deep links (`#/blob/<id>`).
 - Dark / light theme with system-preference fallback.
+- Bilingual UI (English default, Turkish) with persisted language toggle.
 - Walrus Sites deploy configuration and scripts.
 - Unit tests for utility helpers.
 
