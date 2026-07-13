@@ -12,6 +12,7 @@ import { renderPreviewCard, renderLoading, renderError } from "./ui/preview-view
 import { fetchBlob, BlobFetchError } from "./fetcher.js";
 import { addHistory } from "./storage/history.js";
 import { parseHash, goToBlob, onRouteChange } from "./router.js";
+import { initShortcuts } from "./ui/shortcuts.js";
 import { toast } from "./ui/toast.js";
 
 let currentController = null;
@@ -72,6 +73,7 @@ export async function boot(samples = []) {
     }
   }
 
+  initShortcuts({ focusSearch: () => search.focus() });
   onRouteChange(handleRoute);
   handleRoute(parseHash());
 }
