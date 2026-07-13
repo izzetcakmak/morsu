@@ -1,4 +1,4 @@
-// Central configuration for the Walrus Blob Explorer.
+// Central configuration for Morsu (morsu.xyz) — the Walrus blob explorer.
 // Public aggregator endpoints expose GET /v1/blobs/<blobId> to read blob bytes.
 
 // Project owner / attribution. The Sui address is the owner wallet the
