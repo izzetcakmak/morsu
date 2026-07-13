@@ -1,0 +1,37 @@
+/* Responsive adjustments for small screens */
+@media (max-width: 640px) {
+  main {
+    padding-block: var(--s-4);
+  }
+
+  .search {
+    padding: var(--s-4);
+  }
+
+  .search__field {
+    flex-direction: column;
+  }
+
+  .search__field .btn {
+    width: 100%;
+  }
+
+  .header__tag {
+    display: none;
+  }
+
+  .preview__meta {
+    grid-template-columns: 1fr;
+    gap: var(--s-1) 0;
+  }
+
+  .preview__meta dt {
+    margin-top: var(--s-2);
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 0.95rem;
+  }
+}
