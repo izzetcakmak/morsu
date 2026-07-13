@@ -1,0 +1,24 @@
+{
+  "name": "walrus-blob-explorer",
+  "version": "0.1.0",
+  "description": "A tiny, dependency-free web app to look up and preview blobs on Walrus decentralized storage.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "serve": "npx -y http-server . -p 4790 -c-1",
+    "test": "node --test tests/"
+  },
+  "keywords": [
+    "walrus",
+    "sui",
+    "decentralized-storage",
+    "blob",
+    "explorer"
+  ],
+  "author": "İzzet Çakmak",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izzetcakmak/walrus-blob-explorer"
+  }
+}
