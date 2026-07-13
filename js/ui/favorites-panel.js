@@ -4,6 +4,7 @@ import { icons } from "./icons.js";
 import { truncateMiddle } from "../utils/truncate.js";
 import { mimeLabel } from "../utils/mime.js";
 import { getFavorites, removeFavorite } from "../storage/favorites.js";
+import { t } from "../i18n.js";
 
 export function renderFavoritesPanel({ onOpen } = {}) {
   const section = h("section", { class: "section" });
@@ -18,7 +19,7 @@ export function renderFavoritesPanel({ onOpen } = {}) {
     section.style.display = "";
     mount(
       section,
-      h("span", { class: "section__title" }, "Favorites"),
+      h("span", { class: "section__title" }, t("fav.title")),
       h(
         "div",
         { class: "list" },
@@ -51,7 +52,7 @@ function item(entry, onOpen, refresh) {
       "button",
       {
         class: "btn btn--ghost btn--icon",
-        title: "Unpin",
+        title: t("fav.unpin"),
         onclick: () => {
           removeFavorite(entry.blobId);
           refresh();
