@@ -28,6 +28,8 @@ export const icons = {
   download: (o) => svg('<path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/>', o),
   external: (o) =>
     svg('<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/>', o),
+  link: (o) =>
+    svg('<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>', o),
   trash: (o) => svg('<path d="M3 6h18M8 6V4h8v2m-9 0 1 14h8l1-14"/>', o),
   sun: (o) =>
     svg('<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2m-3-7-1.5 1.5M6.5 17.5 5 19m0-14 1.5 1.5M17.5 17.5 19 19"/>', o),
