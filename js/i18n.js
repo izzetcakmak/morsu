@@ -7,7 +7,7 @@ export const DEFAULT_LANG = "en";
 
 export const dictionaries = {
   en: {
-    "header.tag": "decentralized storage",
+    "header.tag": "walrus blob explorer",
     "header.about": "About",
     "header.theme": "Toggle theme",
     "header.langLabel": "TR",
@@ -64,7 +64,7 @@ export const dictionaries = {
     "error.http": "Aggregator returned HTTP {status}.",
     "error.unexpected": "Unexpected error while loading the blob.",
 
-    "about.title": "About Walrus Blob Explorer",
+    "about.title": "About Morsu",
     "about.desc1": "A tiny, dependency-free client for reading blobs from ",
     "about.desc2": " decentralized storage.",
     "about.hint": "Paste a Blob ID, pick an aggregator, and preview the content.",
@@ -81,7 +81,7 @@ export const dictionaries = {
   },
 
   tr: {
-    "header.tag": "merkeziyetsiz depolama",
+    "header.tag": "walrus blob gezgini",
     "header.about": "Hakkında",
     "header.theme": "Temayı değiştir",
     "header.langLabel": "EN",
@@ -138,7 +138,7 @@ export const dictionaries = {
     "error.http": "Aggregator HTTP {status} döndürdü.",
     "error.unexpected": "Blob yüklenirken beklenmeyen bir hata oluştu.",
 
-    "about.title": "Walrus Blob Explorer Hakkında",
+    "about.title": "Morsu Hakkında",
     "about.desc1": "",
     "about.desc2": " merkeziyetsiz depolamasından blob okumak için minik, bağımlılıksız bir istemci.",
     "about.hint": "Bir Blob ID yapıştır, aggregator seç ve içeriği önizle.",
