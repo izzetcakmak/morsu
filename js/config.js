@@ -5,6 +5,7 @@
 // published Walrus Site is associated with.
 export const OWNER = {
   github: "izzetcakmak",
+  email: "info@morsu.xyz",
   suiAddress: "0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840",
 };
 

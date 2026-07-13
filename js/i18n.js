@@ -78,6 +78,10 @@ export const dictionaries = {
 
     "footer.tagline": "read-only client for Walrus storage",
     "footer.source": "source",
+
+    "byline.p1": "Built by ",
+    "byline.p2": " on ",
+    "byline.p3": "",
   },
 
   tr: {
@@ -152,6 +156,10 @@ export const dictionaries = {
 
     "footer.tagline": "Walrus depolama için salt-okunur istemci",
     "footer.source": "kaynak",
+
+    "byline.p1": "",
+    "byline.p2": " tarafından ",
+    "byline.p3": " üzerinde geliştirildi",
   },
 };
 
