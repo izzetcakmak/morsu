@@ -1,5 +1,6 @@
 // App footer with attribution and links.
 import { h } from "../dom.js";
+import { t } from "../i18n.js";
 
 export function renderFooter() {
   return h(
@@ -10,7 +11,7 @@ export function renderFooter() {
       { class: "container footer__inner" },
       h("span", {}, "🦭 Walrus Blob Explorer"),
       h("span", { class: "footer__dot" }, "·"),
-      h("span", { class: "footer__muted" }, "read-only client for Walrus storage"),
+      h("span", { class: "footer__muted" }, t("footer.tagline")),
       h("div", { class: "spacer" }),
       h(
         "a",
@@ -25,7 +26,7 @@ export function renderFooter() {
           target: "_blank",
           rel: "noopener",
         },
-        "source",
+        t("footer.source"),
       ),
     ),
   );
