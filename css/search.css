@@ -1,0 +1,59 @@
+/* Blob ID search box */
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  box-shadow: var(--shadow-2);
+}
+
+.search__label {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.search__hint {
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.search__field {
+  display: flex;
+  gap: var(--s-2);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-border);
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  transition: border-color var(--dur) var(--ease);
+}
+
+.input::placeholder {
+  color: var(--c-text-faint);
+}
+
+.input:focus {
+  border-color: var(--c-brand);
+  outline: none;
+}
+
+.input--invalid {
+  border-color: var(--c-danger);
+}
+
+.search__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
