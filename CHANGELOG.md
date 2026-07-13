@@ -5,6 +5,10 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+### Changed
+
+- Project renamed to **Morsu** (morsu.xyz) — from "Walrus Blob Explorer".
+
 ### Added
 
 - Blob lookup by Blob ID against a selectable Walrus aggregator.
