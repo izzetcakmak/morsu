@@ -1,5 +1,6 @@
 // App footer with attribution and links.
 import { h } from "../dom.js";
+import { OWNER } from "../config.js";
 import { t } from "../i18n.js";
 
 export function renderFooter() {
@@ -13,6 +14,7 @@ export function renderFooter() {
       h("span", { class: "footer__dot" }, "·"),
       h("span", { class: "footer__muted" }, t("footer.tagline")),
       h("div", { class: "spacer" }),
+      h("a", { class: "footer__link", href: `mailto:${OWNER.email}` }, OWNER.email),
       h(
         "a",
         { class: "footer__link", href: "https://walrus.xyz", target: "_blank", rel: "noopener" },

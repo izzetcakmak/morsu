@@ -46,6 +46,8 @@ export function openAbout() {
           },
           `@${OWNER.github}`,
         ),
+        " · ",
+        h("a", { class: "footer__link", href: `mailto:${OWNER.email}` }, OWNER.email),
         " · Sui: ",
         h(
           "button",
