@@ -31,6 +31,16 @@ npm run serve
 Uygulamayı `site-builder` ile Walrus'a yayınlamak için
 [docs/DEPLOY.md](docs/DEPLOY.md) dosyasına bakın.
 
+## Yazar
+
+[@izzetcakmak](https://github.com/izzetcakmak) tarafından geliştirildi.
+
+Sahip Sui cüzdanı (site objesi sahipliği ve ilişkilendirme):
+
+```
+0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840
+```
+
 ## Lisans
 
 MIT © İzzet Çakmak
