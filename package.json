@@ -15,7 +15,13 @@
     "blob",
     "explorer"
   ],
-  "author": "İzzet Çakmak",
+  "author": {
+    "name": "İzzet Çakmak",
+    "url": "https://github.com/izzetcakmak"
+  },
+  "wallets": {
+    "sui": "0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
