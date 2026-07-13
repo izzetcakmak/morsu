@@ -41,6 +41,26 @@ Point a SuiNS name at the site object so it is reachable at
 `https://<name>.wal.app` instead of the base36 subdomain. See the Walrus Sites
 docs for `site-builder` SuiNS linking.
 
+## Site ownership (important for airdrops/attribution)
+
+The Site object is owned by the **Sui wallet that publishes it**. The project's
+owner wallet is:
+
+```
+0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840
+```
+
+If your local `sui client active-address` is a different address, either:
+
+1. Import the owner wallet into the Sui CLI before publishing
+   (`sui keytool import ...` then `sui client switch --address ...`), or
+2. Publish with any wallet, then transfer the Site object to the owner wallet:
+
+```bash
+sui client transfer --object-id <SITE_OBJECT> \
+  --to 0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840
+```
+
 ## Notes
 
 - `walrus/ws-resources.json` sets content-type headers and a catch-all route to
