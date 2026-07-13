@@ -6,7 +6,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 EPOCHS="${EPOCHS:-5}"
 
-echo "Publishing Walrus Blob Explorer to Walrus Sites…"
+echo "Publishing Morsu to Walrus Sites…"
 site-builder \
   --config "$ROOT/walrus/sites-config.yaml" \
   publish "$ROOT" \
