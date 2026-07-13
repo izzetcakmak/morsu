@@ -1,0 +1,37 @@
+/* Builder credit + contact strip */
+.byline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  padding: var(--s-2) var(--s-4);
+  border: 1px solid color-mix(in srgb, var(--c-brand) 35%, transparent);
+  background: color-mix(in srgb, var(--c-brand) 8%, transparent);
+  border-radius: var(--r-pill);
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.byline__link {
+  color: var(--c-brand);
+  font-weight: 700;
+}
+
+.byline__link:hover {
+  text-decoration: underline;
+}
+
+.byline__sep {
+  color: var(--c-text-faint);
+}
+
+@media (max-width: 640px) {
+  .byline {
+    font-size: 0.8rem;
+  }
+
+  .byline__sep {
+    display: none;
+  }
+}

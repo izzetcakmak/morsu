@@ -4,6 +4,7 @@ import { h, mount, $ } from "./dom.js";
 import { initTheme } from "./ui/theme.js";
 import { renderHeader } from "./ui/header.js";
 import { renderFooter } from "./ui/footer.js";
+import { renderByline } from "./ui/byline.js";
 import { renderSearch } from "./ui/search-view.js";
 import { renderSamples } from "./ui/samples.js";
 import { renderHistoryPanel } from "./ui/history-panel.js";
@@ -57,6 +58,7 @@ export async function boot(samples = []) {
     "main",
     { class: "container" },
     search.el,
+    renderByline(),
     previewSlot,
     favorites.el,
     history.el,
