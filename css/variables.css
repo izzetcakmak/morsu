@@ -1,0 +1,52 @@
+/* Design tokens — dark theme is the default (see theme-dark handled via [data-theme]) */
+:root {
+  /* Palette */
+  --c-bg: #0b1020;
+  --c-bg-elev: #141a2e;
+  --c-bg-elev-2: #1c2540;
+  --c-border: #263154;
+  --c-text: #e8ecf7;
+  --c-text-dim: #9aa6c4;
+  --c-text-faint: #66739a;
+
+  /* Brand — Walrus teal/aqua */
+  --c-brand: #37d0c4;
+  --c-brand-strong: #1fb5a8;
+  --c-brand-contrast: #06231f;
+  --c-accent: #7c9cff;
+
+  /* State */
+  --c-danger: #ff6b6b;
+  --c-warning: #ffcf5c;
+  --c-success: #4fd18b;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* Spacing scale */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+
+  /* Elevation */
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+  /* Layout */
+  --content-max: 880px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 180ms;
+}
