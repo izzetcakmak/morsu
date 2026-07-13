@@ -1,0 +1,57 @@
+/* Centered modal dialog */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s-4);
+  z-index: 90;
+  animation: fade-in var(--dur) var(--ease);
+}
+
+.modal {
+  width: 100%;
+  max-width: 460px;
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+  animation: modal-in var(--dur) var(--ease);
+}
+
+.modal__head {
+  display: flex;
+  align-items: center;
+  padding: var(--s-4);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.modal__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.modal__body {
+  padding: var(--s-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.modal__foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s-2);
+  padding: var(--s-4);
+  border-top: 1px solid var(--c-border);
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
