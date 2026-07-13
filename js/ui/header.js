@@ -48,7 +48,7 @@ export function renderHeader() {
         "a",
         { class: "brand", href: "#/" },
         h("span", { class: "brand__mark" }, "🦭"),
-        h("span", {}, "Walrus Blob Explorer"),
+        h("span", {}, "Morsu"),
       ),
       h("span", { class: "header__tag" }, t("header.tag")),
       h("div", { class: "spacer" }),
