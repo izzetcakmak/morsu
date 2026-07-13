@@ -2,7 +2,7 @@
 
 ## Scope
 
-Walrus Blob Explorer is a read-only client. It never writes to Walrus, never
+Morsu is a read-only client. It never writes to Walrus, never
 handles private keys, and never transmits your data anywhere except read
 requests to the aggregator you explicitly select.
 

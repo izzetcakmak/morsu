@@ -1,6 +1,6 @@
 # Deploying to Walrus Sites
 
-The Walrus Blob Explorer is a fully static app, so it can live on
+Morsu is a fully static app, so it can live on
 [Walrus Sites](https://docs.walrus.site) — served directly from decentralized
 storage.
 
