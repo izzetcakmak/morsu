@@ -1,10 +1,14 @@
-# 🦭 Walrus Blob Explorer
+# 🦭 Morsu
 
-[Walrus](https://walrus.xyz) merkeziyetsiz depolamada tutulan blob'ları aramak
-ve önizlemek için minik, bağımlılıksız bir web uygulaması. Bir **Blob ID**
-yapıştırın, bir aggregator seçin; resim, metin, JSON, PDF ve videoları anında
-önizleyin — yerel geçmiş ve favorilerle. Uygulamanın kendisi bir **Walrus Site**
-olarak deploy edilecek şekilde tasarlandı.
+**[morsu.xyz](https://morsu.xyz)** — [Walrus](https://walrus.xyz) merkeziyetsiz
+depolamada tutulan blob'ları aramak ve önizlemek için minik, bağımlılıksız bir
+web uygulaması. Bir **Blob ID** yapıştırın, bir aggregator seçin; resim, metin,
+JSON, PDF ve videoları anında önizleyin — yerel geçmiş ve favorilerle.
+Uygulamanın kendisi bir **Walrus Site** olarak deploy edilecek şekilde
+tasarlandı.
+
+> *Morsu* adı, Türkçe **“mors”** (walrus) kelimesinden gelir (Fince *mursu*'ya
+> da bir selam).
 
 ## Özellikler
 
