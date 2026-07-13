@@ -15,6 +15,7 @@ olarak deploy edilecek şekilde tasarlandı.
 - ⭐ Favori blob'ları sabitle
 - 🔗 Paylaşılabilir derin bağlantılar (`#/blob/<id>`)
 - 🌗 Koyu / açık tema
+- 🌍 Çift dilli arayüz — İngilizce (varsayılan) ve Türkçe, tek tıkla geçiş
 - ⚡ Sıfır bağımlılık, sıfır build — saf HTML/CSS/JS
 
 ## Hızlı başlangıç
