@@ -14,6 +14,7 @@ import { addHistory } from "./storage/history.js";
 import { parseHash, goToBlob, onRouteChange } from "./router.js";
 import { initShortcuts } from "./ui/shortcuts.js";
 import { toast } from "./ui/toast.js";
+import { t, initLang } from "./i18n.js";
 
 let currentController = null;
 
@@ -32,7 +33,7 @@ async function loadBlob(blobId, { previewSlot, panels }) {
   } catch (err) {
     if (err && err.name === "AbortError") return;
     const msg =
-      err instanceof BlobFetchError ? err.message : "Unexpected error while loading the blob.";
+      err instanceof BlobFetchError ? t(`error.${err.code}`, err.params) : t("error.unexpected");
     mount(previewSlot, renderError(msg));
     toast(msg, "error");
   }
@@ -40,6 +41,7 @@ async function loadBlob(blobId, { previewSlot, panels }) {
 
 export async function boot(samples = []) {
   initTheme();
+  initLang();
 
   const root = $("#app");
   const previewSlot = h("div", { id: "preview-slot" });
