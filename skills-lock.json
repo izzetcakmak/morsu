@@ -19,6 +19,12 @@
       "skillPath": "walrus-quilts/SKILL.md",
       "computedHash": "04fe3bad4c49f36e22bd143533a415c582294952caa4be8ba641a694cc913a26"
     },
+    "walrus-sites": {
+      "source": "mystenlabs/walrus-skills",
+      "sourceType": "github",
+      "skillPath": "walrus-sites/SKILL.md",
+      "computedHash": "98e213f7a4b908bd2bfb4a401193a7b59c16316ca8a61fa29d5068a655e3cfcc"
+    },
     "walrus-troubleshooting": {
       "source": "mystenlabs/walrus-skills",
       "sourceType": "github",
