@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "serve": "npx -y http-server . -p 4790 -c-1",
-    "test": "node --test tests/"
+    "test": "node --test \"tests/*.test.js\""
   },
   "keywords": [
     "walrus",
