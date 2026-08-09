@@ -1,15 +1,14 @@
 {
-  "$schema": "Walrus Sites resource configuration",
   "headers": {
+    "/css/*": {
+      "Content-Type": "text/css; charset=utf-8"
+    },
     "/index.html": {
-      "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "no-cache"
+      "Cache-Control": "no-cache",
+      "Content-Type": "text/html; charset=utf-8"
     },
     "/js/*": {
       "Content-Type": "application/javascript; charset=utf-8"
-    },
-    "/css/*": {
-      "Content-Type": "text/css; charset=utf-8"
     }
   },
   "routes": {
@@ -20,8 +19,25 @@
     "image_url": "assets/favicon.svg",
     "description": "Morsu — look up and preview blobs on Walrus decentralized storage.",
     "project_url": "https://github.com/izzetcakmak/morsu",
-    "creator": "izzetcakmak",
-    "owner_sui_address": "0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840"
+    "creator": "izzetcakmak"
   },
-  "ignore": ["/tests/*", "/docs/*", "/.github/*", "/*.md"]
+  "site_name": "Morsu",
+  "object_id": "0x8a3608fc90d544d1da70e0dd7cf4d083eda60f93701fa5d1e5a47159de7d97b9",
+  "ignore": [
+    "/tests/*",
+    "/docs/*",
+    "/.github/*",
+    "/*.md",
+    "/.git/*",
+    "/.agents/*",
+    "/.claude/*",
+    "/scripts/*",
+    "/walrus/*",
+    "/skills-lock.json",
+    "/package.json",
+    "/CNAME",
+    "/.ci/*",
+    "/.gitignore",
+    "/.nvmrc"
+  ]
 }
