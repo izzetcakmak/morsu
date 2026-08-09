@@ -18,6 +18,19 @@ sui client active-address
 walrus info
 ```
 
+## Live deployment
+
+Morsu is published to **Walrus Sites on mainnet**:
+
+| | |
+|---|---|
+| Site Object ID | `0x8a3608fc90d544d1da70e0dd7cf4d083eda60f93701fa5d1e5a47159de7d97b9` |
+| Base36 subdomain | `3g0ethqgr8t9467u7grqc55vbcj2ed3kexf8gqb89u9mvxy7jt` |
+| Published | 2026-08-09, 5 epochs |
+
+The object ID is stored in `walrus/ws-resources.json`, so `scripts/update.sh`
+picks it up automatically.
+
 ## First publish
 
 ```bash
@@ -32,14 +45,20 @@ EPOCHS=5 scripts/publish.sh
 ## Updating
 
 ```bash
-SITE_OBJECT=0x<your-site-object-id> EPOCHS=5 scripts/update.sh
+EPOCHS=5 scripts/update.sh
 ```
 
-## Optional: SuiNS name
+## Reaching the site over a portal
 
-Point a SuiNS name at the site object so it is reachable at
-`https://<name>.wal.app` instead of the base36 subdomain. See the Walrus Sites
-docs for `site-builder` SuiNS linking.
+Public portals such as `wal.app` resolve **SuiNS names only** — the base36
+subdomain works exclusively on a portal you run yourself:
+
+```bash
+site-builder --config walrus/sites-config.yaml --context mainnet convert <object-id>
+```
+
+To get a public `https://<name>.wal.app` URL, buy a SuiNS name at
+[suins.io](https://suins.io) and point it at the site object ID above.
 
 ## Site ownership (important for airdrops/attribution)
 
@@ -49,6 +68,11 @@ owner wallet is:
 ```
 0xc7db10a90785f797f180611b1646710dbc313de6b6736273823d775f80a3d840
 ```
+
+> **Pending:** the live site object was published from
+> `0xac2d2fdcf625946575305e99fdefdd486e14a8fa30b8ae156ab490c3318d692d`
+> (the CLI's active address), not the owner wallet. Transfer it with the command
+> below to restore attribution.
 
 If your local `sui client active-address` is a different address, either:
 
@@ -65,5 +89,9 @@ sui client transfer --object-id <SITE_OBJECT> \
 
 - `walrus/ws-resources.json` sets content-type headers and a catch-all route to
   `index.html` so deep links resolve.
-- `docs/`, `tests/` and `.github/` are excluded from the published bundle via the
-  `ignore` list in `ws-resources.json`.
+- `docs/`, `tests/`, `scripts/`, `.github/`, agent-skill folders and repo
+  metadata files are excluded from the published bundle via the `ignore` list in
+  `ws-resources.json`. The live site carries 47 resources — app code only.
+- `site-builder` needs both `--context mainnet` (Sui side) and
+  `--walrus-context mainnet` (Walrus side); omitting the latter makes it read
+  the testnet staking object and fail.
