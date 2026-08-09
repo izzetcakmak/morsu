@@ -5,11 +5,15 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 EPOCHS="${EPOCHS:-5}"
+NETWORK="${NETWORK:-mainnet}"
 
-echo "Publishing Morsu to Walrus Sites…"
+echo "Publishing Morsu to Walrus Sites ($NETWORK)…"
 site-builder \
   --config "$ROOT/walrus/sites-config.yaml" \
+  --context "$NETWORK" \
+  --walrus-context "$NETWORK" \
   publish "$ROOT" \
+  --ws-resources "$ROOT/walrus/ws-resources.json" \
   --epochs "$EPOCHS"
 
-echo "Done. Save the printed Site Object ID to update later with scripts/update.sh."
+echo "Done. The Site Object ID is written back to walrus/ws-resources.json."
