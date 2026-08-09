@@ -1,23 +1,24 @@
 {
-  "note": "Sample Walrus testnet blob IDs for quick testing. Testnet blobs can expire; if a sample 404s, store your own with `walrus store <file>` and paste the returned Blob ID.",
+  "note": "Real Walrus mainnet blob IDs, stored for 53 epochs (through epoch 89, ~August 2028). Sources live in samples/ in the repository. Re-upload with `walrus --context mainnet store samples/<file> --epochs 53` and update the ids here if they ever expire.",
+  "network": "mainnet",
   "samples": [
     {
       "label": "Text file",
       "label_tr": "Metin dosyası",
       "emoji": "📄",
-      "blobId": "0BZQzr9Xp3nkq5m2VtY7cJdLfW8HgR4sT1uN6oPaEbC"
+      "blobId": "gTgVUJHC3RR0n0j2S5W6eoCfw2VVePM_ehSmbGrE6gY"
     },
     {
       "label": "PNG image",
       "label_tr": "PNG görseli",
       "emoji": "🖼️",
-      "blobId": "1cLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPqRsTuVwXyz"
+      "blobId": "rpBz1Cm5IIhcZ2sQHKgidHsiyeQ8VabsWupI5Isa7JM"
     },
     {
       "label": "JSON doc",
       "label_tr": "JSON belgesi",
       "emoji": "🧾",
-      "blobId": "2dMnOpQrStUvWxYzAbCdEfGhIjKlMnOpQrStUvWxYz1"
+      "blobId": "b1e96aWPvIP26QLxVuA2W1J3b5h70RG8hVqRIQFE3Ho"
     }
   ]
 }
