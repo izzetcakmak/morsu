@@ -24,7 +24,9 @@ export const AGGREGATORS = [
   },
 ];
 
-export const DEFAULT_AGGREGATOR_ID = "testnet";
+// Mainnet by default: the bundled sample blobs live on mainnet, and mainnet
+// blobs do not expire out from under visitors the way testnet ones do.
+export const DEFAULT_AGGREGATOR_ID = "mainnet";
 
 // Cap how much of a text/JSON blob we will render inline (bytes).
 export const MAX_INLINE_PREVIEW_BYTES = 2 * 1024 * 1024; // 2 MB
