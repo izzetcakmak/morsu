@@ -26,7 +26,7 @@ Morsu is published to **Walrus Sites on mainnet**:
 |---|---|
 | Site Object ID | `0x8a3608fc90d544d1da70e0dd7cf4d083eda60f93701fa5d1e5a47159de7d97b9` |
 | Base36 subdomain | `3g0ethqgr8t9467u7grqc55vbcj2ed3kexf8gqb89u9mvxy7jt` |
-| Published | 2026-08-09, 5 epochs |
+| Published | 2026-08-09, 53 epochs (mainnet epoch = 14 days, so ~2 years) |
 
 The object ID is stored in `walrus/ws-resources.json`, so `scripts/update.sh`
 picks it up automatically.
@@ -57,8 +57,13 @@ subdomain works exclusively on a portal you run yourself:
 site-builder --config walrus/sites-config.yaml --context mainnet convert <object-id>
 ```
 
-To get a public `https://<name>.wal.app` URL, buy a SuiNS name at
-[suins.io](https://suins.io) and point it at the site object ID above.
+To get a public `https://<name>.wal.app` URL, open your SuiNS name at
+[suins.io](https://suins.io) and use **Set Walrus Site ID** — the field takes the
+site *object ID*, not a URL. The portal resolves `<name>.wal.app` through the
+name record's `walrusSiteId` field, so the name and the site object may belong
+to different addresses.
+
+Morsu uses the name `@970`, held by the owner wallet.
 
 ## Site ownership (important for airdrops/attribution)
 
