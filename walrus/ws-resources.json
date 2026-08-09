@@ -38,6 +38,7 @@
     "/CNAME",
     "/.ci/*",
     "/.gitignore",
-    "/.nvmrc"
+    "/.nvmrc",
+    "/samples/*"
   ]
 }
