@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "walrus-blob-lifecycle": {
+      "source": "mystenlabs/walrus-skills",
+      "sourceType": "github",
+      "skillPath": "walrus-blob-lifecycle/SKILL.md",
+      "computedHash": "1b87af1841d35a609641a700f75a44e07291695943ed3b7c333aa92ca47984ed"
+    },
+    "walrus-http-api": {
+      "source": "mystenlabs/walrus-skills",
+      "sourceType": "github",
+      "skillPath": "walrus-http-api/SKILL.md",
+      "computedHash": "829e0cc1cea83b4629d34a2265781454af055d967798e29803b6bf46ce4cfc6b"
+    },
+    "walrus-quilts": {
+      "source": "mystenlabs/walrus-skills",
+      "sourceType": "github",
+      "skillPath": "walrus-quilts/SKILL.md",
+      "computedHash": "04fe3bad4c49f36e22bd143533a415c582294952caa4be8ba641a694cc913a26"
+    },
+    "walrus-troubleshooting": {
+      "source": "mystenlabs/walrus-skills",
+      "sourceType": "github",
+      "skillPath": "walrus-troubleshooting/SKILL.md",
+      "computedHash": "1ed3f1bdb1956a7926965f30a914a14e6b5860a857946ddac39726c0a90f795d"
+    },
+    "walrus-ts-sdk": {
+      "source": "mystenlabs/walrus-skills",
+      "sourceType": "github",
+      "skillPath": "walrus-ts-sdk/SKILL.md",
+      "computedHash": "43bed8e997c6309c74e773232a2e2f3fca12c15a08d285f1525eaeedb9e41c38"
+    }
+  }
+}
