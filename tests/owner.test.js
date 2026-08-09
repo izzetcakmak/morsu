@@ -12,9 +12,10 @@ test("owner GitHub handle is set", () => {
 
 test("owner address matches everywhere it is duplicated", async () => {
   const { readFile } = await import("node:fs/promises");
+  // walrus/ws-resources.json is excluded: site-builder rewrites that file on
+  // every publish and drops any field outside its own schema.
   const files = [
     "package.json",
-    "walrus/ws-resources.json",
     "README.md",
     "README.tr.md",
     "docs/DEPLOY.md",
