@@ -1,0 +1,13 @@
+Morsu — a Walrus blob explorer
+==============================
+
+You are reading a real blob stored on Walrus mainnet.
+
+Walrus is decentralized storage: this file was erasure-coded into slivers,
+spread across a committee of storage nodes, and certified on Sui. No single
+server holds it, and no single server can take it down.
+
+Morsu reads blobs like this one from a public aggregator and previews them
+in your browser. Paste any Walrus Blob ID into the search box to try your own.
+
+Built by izzetcakmak — https://morsu.xyz

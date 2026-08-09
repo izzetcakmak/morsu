@@ -1,0 +1,23 @@
+{
+  "name": "Morsu sample document",
+  "description": "A real JSON blob stored on Walrus mainnet, used by the sample buttons on morsu.xyz.",
+  "storage": {
+    "network": "Walrus mainnet",
+    "encoding": "RedStuff / Reed-Solomon erasure coding",
+    "storageUnit": "1 MiB",
+    "epochDurationDays": 14,
+    "maxEpochs": 53
+  },
+  "howItWorks": [
+    "A blob is erasure-coded into slivers.",
+    "Slivers are distributed across a committee of storage nodes.",
+    "An availability certificate is recorded on Sui.",
+    "Any aggregator can reconstruct the blob from a subset of slivers."
+  ],
+  "project": {
+    "name": "Morsu",
+    "site": "https://morsu.xyz",
+    "walrusSite": "https://970.wal.app",
+    "repository": "https://github.com/izzetcakmak/morsu"
+  }
+}
